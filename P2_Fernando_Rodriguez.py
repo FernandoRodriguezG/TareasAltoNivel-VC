@@ -47,5 +47,8 @@ for i in imgComp:
     clase = encuentraClase(img2,desList)
     if clase != -1:
         cv2.putText(imgOr,nombresObjetos[clase],(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),1)
-    cv2.imshow(nombresObjetos[clase],imgOr)
+        cv2.imshow(f'{nombresObjetos[clase]} - {i}',imgOr)
+    else:
+        cv2.putText(imgOr,'N/A',(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),1)
+        cv2.imshow(f'N/A - {i}',imgOr)
 cv2.waitKey(0) 
