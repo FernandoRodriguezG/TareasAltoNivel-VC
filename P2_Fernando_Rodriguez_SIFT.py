@@ -44,7 +44,7 @@ imgComp = os.listdir(path2)
 lista_img_checar = []
 for i in imgComp:
     img2 = cv2.imread(f'{path2}/{i}')
-    img2 = cv2.resize(img2, (600, 800)) 
+    img2 = cv2.resize(img2, (300, 400)) 
     imgOr = img2.copy()
     clase = encuentraClase(img2,desList)
     if clase != -1:
